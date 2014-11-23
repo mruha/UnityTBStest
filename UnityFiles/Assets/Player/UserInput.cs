@@ -69,7 +69,21 @@ public class UserInput : MonoBehaviour
 	
 	private void RotateCamera()
 	{
-	
+		Vector3 origin = Camera.main.transform.eulerAngles;
+		Vector3 destination = origin;
+		
+		// ALT + mouse to rotate the camera
+		if((Input.GetKey(KeyCode.LeftAlt) || Input.GetKey(KeyCode.RightAlt)) && Input.GetMouseButton(1))
+		{
+			destination.x -= Input.GetAxis("Mouse Y") * ResourceManager.RotateAmount;
+			destination.y += Input.GetAxis("Mouse X") * ResourceManager.RotateAmount;
+		}
+		
+		// if destination != origin => rotate
+		if(destination != origin)
+		{
+			Camera.main.transform.eulerAngles = Vector3.MoveTowards(origin, destination, Time.deltaTime * ResourceManager.RotateSpeed);
+		}
 	}
 
 	// Use this for initialization

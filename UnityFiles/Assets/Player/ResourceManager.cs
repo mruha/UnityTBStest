@@ -9,5 +9,6 @@ namespace RTS{
 	 	public static float ScrollWidth{ get{ return 15;}}
 	 	public static float MinCameraHeight{ get{ return 10;}}
 		public static float MaxCameraHeight{ get{ return 40;}}
+		public static float RotateAmount{ get{ return 10;}}
 	}
 }
