@@ -78,7 +78,13 @@ public class UserInput : MonoBehaviour
 			destination.x -= Input.GetAxis("Mouse Y") * ResourceManager.RotateAmount;
 			destination.y += Input.GetAxis("Mouse X") * ResourceManager.RotateAmount;
 		}
-		
+/*
+		// alternative 90 degree solid rotations - in 90 degree steps
+		if((Input.GetKey(KeyCode.LeftAlt) || Input.GetKey(KeyCode.RightAlt)) && Input.GetKey(KeyCode.LeftArrow))
+		{
+			destination.x -= ResourceManager.RotateLeft;
+		}		
+*/		
 		// if destination != origin => rotate
 		if(destination != origin)
 		{

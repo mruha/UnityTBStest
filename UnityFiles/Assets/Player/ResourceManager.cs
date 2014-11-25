@@ -10,5 +10,13 @@ namespace RTS{
 	 	public static float MinCameraHeight{ get{ return 10;}}
 		public static float MaxCameraHeight{ get{ return 40;}}
 		public static float RotateAmount{ get{ return 10;}}
+		
+		private static bool _GameMenu = false;
+		
+		public static bool GameMenu
+		{
+			get	{ return _GameMenu;}
+			set { _GameMenu = value;}
+		}
 	}
 }
