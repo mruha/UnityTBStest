@@ -78,7 +78,7 @@ public class UserInput : MonoBehaviour
 	private void RotateCamera()
 	{
 		// detect plane/something hit with raycasting
-		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+		Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width/2,Screen.height/2,0));
 		RaycastHit rayHit;
 		Vector3 hitCoord;
 		
