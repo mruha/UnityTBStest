@@ -7,8 +7,11 @@ namespace RTS{
 	 	public static float ScrollSpeed{ get{ return 25;}}
 	 	public static float RotateSpeed{ get{ return 40;}}
 	 	public static float ScrollWidth{ get{ return 15;}}
+	 	
 	 	public static float MinCameraHeight{ get{ return 10;}}
 		public static float MaxCameraHeight{ get{ return 40;}}
+		public static float CamMinDistance{ get{ return 10;}}
+		
 		public static float RotateAmount{ get{ return 10;}}
 		public static float RotateScale{ get{ return 5;}}
 		
